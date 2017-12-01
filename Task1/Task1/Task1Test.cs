@@ -11,7 +11,7 @@ namespace Task1
         #region Constants
         private const int WAIT_TIMEOUT = 10;
         private const string URL = "https://google.ru/";
-        private const string EXPECTED_TITLE = "Chrome";
+        private const string EXPECTED_TITLE = "Google";
         #endregion
 
         private IWebDriver driver;
