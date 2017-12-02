@@ -1,0 +1,5 @@
+Sitemap: /feeds/sitemap.xml
+
+User-agent: *
+Allow: /
+Disallow: */cache/*

@@ -1,0 +1,41 @@
+#################
+# Project files #
+#################
+public_html/includes/config.inc.php
+public_html/data/backups/*
+public_html/cache/*
+
+*.bak
+*.000
+*.001
+*.002
+*.003
+*.004
+*.005
+*.006
+*.007
+*.008
+*.009
+*.old
+*.ignore
+
+######################
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+error_log
+.ftpquota
+
+##############################
+# Exclude from ignore-filter #
+##############################
+!.htaccess
+!public_html/images/*.html
+!public_html/includes/templates/default*
