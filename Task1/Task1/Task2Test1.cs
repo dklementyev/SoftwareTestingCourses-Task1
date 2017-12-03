@@ -31,7 +31,7 @@ namespace Task1
         [TestMethod()]
         public void Task2_1TestCase()
         {
-            wait.Until(ExpectedConditions.TitleIs("My Store"));
+            wait.Until(ExpectedConditions.TitleIs(EXPECTED_TITLE));
             var loginField = this.driver.FindElement(By.XPath(".//input[@name='username']"));
             var pwdField = this.driver.FindElement(By.XPath(".//input[@name='password']"));
             var loginBtn = this.driver.FindElement(By.XPath(".//button[@name='login']"));
