@@ -13,6 +13,7 @@ namespace Task1
         private const string ADMIN_PASSWORD = "admin";
         private const string ADMIN_URL = "localhost:8081/admin";
         private const int WAIT_TIMEOUT = 10;
+        private const string EXPECTED_TITLE = "My Store";
         #endregion
 
         private IWebDriver driver;
