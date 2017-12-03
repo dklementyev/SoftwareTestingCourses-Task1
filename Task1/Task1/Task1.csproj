@@ -57,6 +57,7 @@
   <ItemGroup>
     <Compile Include="Task1Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Task2Test1.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -26,9 +26,9 @@ namespace Task1
         [TestMethod()]
         public void TestCase()
         {
-            //driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(WAIT_TIMEOUT);
-            //driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(60);
-            //driver.Manage().Window.Maximize();
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(WAIT_TIMEOUT);
+            driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(60);
+            driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl(URL);
             System.Threading.Thread.Sleep(5000);
             wait.Until(ExpectedConditions.TitleIs(EXPECTED_TITLE));
