@@ -20,7 +20,7 @@ namespace Task1
         private WebDriverWait wait;
 
         [TestInitialize()]
-        public void Task7_Setup()
+        public void Task8_Setup()
         {
             driver = new ChromeDriver();
             wait = new WebDriverWait(driver, TimeSpan.FromSeconds(WAIT_TIMEOUT));
@@ -41,7 +41,7 @@ namespace Task1
         }
 
         [TestCleanup()]
-        public void Task7_TearDown()
+        public void Task8_TearDown()
         {
             driver.Quit();
             driver = null;
