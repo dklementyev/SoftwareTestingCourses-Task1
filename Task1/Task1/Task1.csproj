@@ -66,7 +66,7 @@
     <Compile Include="Task7.cs" />
     <Compile Include="Task8.cs" />
     <Compile Include="Task9.cs" />
-    <Compile Include="Task10.cs" />
+    <Compile Include="Task9_2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

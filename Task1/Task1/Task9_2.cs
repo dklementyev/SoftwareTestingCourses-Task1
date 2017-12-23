@@ -8,7 +8,7 @@ using OpenQA.Selenium.Support.UI;
 namespace Task1
 {
     [TestClass]
-    public class Task10
+    public class Task9_2
     {
         private const string ADMIN_LOGIN = "admin";
         private const string ADMIN_PASSWORD = "admin";
@@ -20,7 +20,7 @@ namespace Task1
         private WebDriverWait wait;
 
         [TestInitialize()]
-        public void Task10_Setup()
+        public void Task9_Setup()
         {
             driver = new ChromeDriver();
             wait = new WebDriverWait(driver, TimeSpan.FromSeconds(WAIT_TIMEOUT));
@@ -30,7 +30,7 @@ namespace Task1
         }
 
         [TestMethod]
-        public void Task10_CheckSort()
+        public void Task9_2_CheckSort()
         {
             //Login
 
@@ -79,7 +79,7 @@ namespace Task1
         }
 
         [TestCleanup()]
-        public void Task10_TearDown()
+        public void Task9_TearDown()
         {
             driver.Quit();
             driver = null;
