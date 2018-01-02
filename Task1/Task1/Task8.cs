@@ -35,8 +35,13 @@ namespace Task1
             ReadOnlyCollection<IWebElement> products = driver.FindElements(By.XPath(".//li[contains(@class,'product')]"));
             foreach (var product in products)
             {
-                var stickerElement = product.FindElement(By.XPath(".//div[contains(@class,'sticker')]"));
-                Assert.IsTrue(stickerElement.Displayed);
+                var stickerElements = product.FindElements(By.XPath(".//div[contains(@class,'sticker')]"));
+                Assert.IsTrue(stickerElements.Count.Equals(1));
+                foreach (var stickerElement in stickerElements)
+                {
+                    Assert.IsTrue(stickerElement.Displayed);
+                }
+                
             }
         }
 
