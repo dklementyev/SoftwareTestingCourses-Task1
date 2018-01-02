@@ -4,6 +4,8 @@ using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Support.UI;
 
 namespace Task1
@@ -16,14 +18,35 @@ namespace Task1
         private const string ADMIN_URL = "http://localhost/litecart";
         private const int WAIT_TIMEOUT = 10;
         private const string EXPECTED_TITLE = "Online Store | My Store";
-
+        private const string BROWSER = "Firefox";
         private IWebDriver driver;
         private WebDriverWait wait;
 
+
+        private void BrowserSetup()
+        {
+            if (BROWSER == "Chrome")
+            {
+                driver = new ChromeDriver();
+                return;
+            }
+            if (BROWSER == "Firefox")
+            {
+                driver = new FirefoxDriver();
+                return;
+            }
+            if (BROWSER == "IE")
+            {
+                driver = new InternetExplorerDriver();
+                return;
+            }
+
+            Assert.Fail("Browser does not supported");
+        }
         [TestInitialize()]
         public void Task10_Setup()
         {
-            driver = new ChromeDriver();
+            BrowserSetup();
             wait = new WebDriverWait(driver, TimeSpan.FromSeconds(WAIT_TIMEOUT));
             driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl(ADMIN_URL);
@@ -32,7 +55,7 @@ namespace Task1
 
         private List<string> ConvertColorToList(string color)
         {
-            var correctRgba = color.Replace("rgba(", "").Replace(")", "").Replace(" ", "");
+            var correctRgba = color.Replace("rgba(", "").Replace("rgb(","").Replace(")", "").Replace(" ", "");
             var rgbaList = correctRgba.Split(',').ToList();
 
             return rgbaList;

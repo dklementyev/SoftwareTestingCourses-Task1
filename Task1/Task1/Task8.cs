@@ -22,6 +22,7 @@ namespace Task1
         [TestInitialize()]
         public void Task8_Setup()
         {
+
             driver = new ChromeDriver();
             wait = new WebDriverWait(driver, TimeSpan.FromSeconds(WAIT_TIMEOUT));
             driver.Manage().Window.Maximize();
