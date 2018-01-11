@@ -72,6 +72,8 @@
     <Compile Include="Task11.cs" />
     <Compile Include="Task12.cs" />
     <Compile Include="Task13.cs" />
+    <Compile Include="Task17.cs" />
+    <Compile Include="UnitTest1.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
