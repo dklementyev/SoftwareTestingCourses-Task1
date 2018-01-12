@@ -26,7 +26,7 @@ namespace TestProject.tests
             app.OpenSite();
             app.BuyProducts(products);
             app.DeleteAllProducts();
-
+            app.Quit();
         }
     }
 }
